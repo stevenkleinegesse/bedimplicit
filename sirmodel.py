@@ -34,7 +34,7 @@ param_1 = np.random.uniform(0, 0.5, NS).reshape(-1, 1)
 prior_sir = np.hstack((param_0, param_1))
 
 # Define the domain for BO
-domain_sir = [{'name': 'var_1', 'type': 'continuous', 'domain': (0.01, 4.00), 'dimensionality':int(DIMS)}]
+domain_sir = [{'name': 'var_1', 'type': 'continuous', 'domain': (0.01, 3.00), 'dimensionality':int(DIMS)}]
 
 # Define the constraints for BO
 # Time cannot go backwards
@@ -61,5 +61,5 @@ BED_sir = staticdesign.StaticBED(prior_sir, model_sir, domain=domain_sir, constr
 BED_sir.optimisation(init_num=INIT_NUM, max_iter=MAX_ITER)
 
 # ---- SAVE MODEL ------ #
-file = './sirmodel_dim'.format(DIMS)
+file = './sirmodel_dim{}'.format(DIMS)
 BED_sir.save(filename=file)

@@ -81,4 +81,4 @@ class StaticBED:
 
     def save(self, filename):
 
-        np.savez('{}.npz'.format(filename), **self.savedata, utilobj=self.utilobj, bo_obj=self.bo_obj)
+        np.savez('{}.npz'.format(filename), **self.savedata, utilobj=self.utilobj, bo_obj=self.bo_obj, prior_samples=self.prior_samples)

@@ -59,5 +59,5 @@ BED_death = staticdesign.StaticBED(prior_death, model_death, domain=domain_death
 BED_death.optimisation(init_num=INIT_NUM, max_iter=MAX_ITER)
 
 # ---- SAVE MODEL ------ #
-file = './deathmodel_dim'.format(DIMS)
+file = './deathmodel_dim{}'.format(DIMS)
 BED_death.save(filename=file)
