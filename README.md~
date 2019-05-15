@@ -10,7 +10,7 @@ The easiest way to install all the required packages is via Anaconda.
 Create an anaconda environment, called <env_name>, that uses Python 3.6 and **not 3.7**, as gpyopt currently fails to work with that version.
 
 ```
-conda create <env_name> python=3.6
+conda env create <env_name> python=3.6
 conda activate <env_name>
 ```
 
@@ -30,3 +30,4 @@ All the critical required packages are:
 - joblib v0.11
 - glmnet
 - gpyopt
+- scikit-learn
